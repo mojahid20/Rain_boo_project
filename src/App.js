@@ -3,11 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar';
 import About from './Pages/About';
-import Home from './Pages/Home';
+
 import Service from './Pages/Service'
-import Login from './Pages/Login';
+import Login from './Pages/Login'
+import Home from './Pages/Home/Home';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  AOS.init();
   return (
     < >
       <Navbar>
