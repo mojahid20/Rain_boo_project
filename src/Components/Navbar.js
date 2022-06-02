@@ -1,7 +1,9 @@
 import React from 'react';
 import {  NavLink } from 'react-router-dom';
+import UserAdmin from '../Hookc/UserAdmin';
 
 const Navbar = ({children}) => {
+  const admin=UserAdmin();
     return (
         <div>
             
@@ -9,7 +11,8 @@ const Navbar = ({children}) => {
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
    
   <div class="drawer-content flex flex-col ">
-    <div class="w-full navbar bg-base-300 fixed top-0 z-50 ">
+    <div class="w-full navbar bg-transparent fixed top-0 z-50 ">
+    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
     <div class="flex-1 px-2 mx-2 text-3xl ">Rain Boo</div>
       <div class="flex-none lg:hidden">
         <label for="my-drawer-3" class="btn btn-square btn-ghost">
@@ -21,6 +24,10 @@ const Navbar = ({children}) => {
         <ul class="menu menu-horizontal">
           
          <li><NavLink to='/'>Home</NavLink></li> 
+       
+         { admin &&(
+           <li><NavLink to='/Dashbord'>Dashbord</NavLink></li>
+           ) }
          <li> <NavLink to='/about'>About</NavLink></li>
          <li> <NavLink to='/service'>Service</NavLink></li>
           <li><NavLink to='/login'>Login</NavLink></li>

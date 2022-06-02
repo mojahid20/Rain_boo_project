@@ -1,5 +1,5 @@
 import React from "react";
-import cutdodo from "../../Assets/image/cut dodo.jpg";
+import dodo from "../../Assets/image/dodo.jpg";
 const Landing = () => {
   return (
     <>
@@ -25,7 +25,7 @@ const Landing = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            <img src={cutdodo} class="h-full" alt="" />
+            <img src={dodo} class="h-full" alt="" />
           </div>
         </div>
       </div>
